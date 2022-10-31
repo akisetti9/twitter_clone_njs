@@ -1,0 +1,60 @@
+### API-1 To Register the User
+POST  http://localhost:3000/register/
+Content-Type: application/json 
+
+{
+  "username": "adam_richard123",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+### API-2 To Login the User
+POST  http://localhost:3000/login/
+Content-Type: application/json 
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+### API-3 Returns the latest tweets of people whom the user follows. Return 4 tweets at a time
+GET  http://localhost:3000/user/tweets/feed/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+
+### API-4 Returns the list of all names of people whom the user follows
+GET  http://localhost:3000/user/following/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+
+### API-5 Returns the list of all names of people who follows the user
+GET  http://localhost:3000/user/followers/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+
+### API-6 Returns the a specific tweet
+GET  http://localhost:3000/tweets/1/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+
+### API-7 Returns the list of usernames who liked the tweet
+GET  http://localhost:3000/tweets/1/likes/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+
+### API-8 Returns the list of replies
+GET  http://localhost:3000/tweets/1/replies/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+
+### API-9 Returns a list of all tweets of the user
+GET  http://localhost:3000/user/tweets/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+
+### API-10 Create a tweet in the tweet table
+POST  http://localhost:3000/user/tweets/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
+Content-Type: application/json
+
+{
+   "tweet": "The Mornings..."
+}
+
+### API-11 Delete a tweet in the tweet table
+DELETE http://localhost:3000/tweets/13/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjY1MzA0NTYwfQ.lg_IGsncguJ4Q7-r-OwFoMKf7oaAlo0asv7let19msI
